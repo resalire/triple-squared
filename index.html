@@ -24,16 +24,16 @@
   <body>
     <ul class="triplesq-sidebar hide-on-tablets">
       <li><img src="images/logo.png" class="logo"></li>
-      <li><a href="#project">Project</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#m1">Milestone 1</a></li>
-      <li><a class="disabled" >Milestone 2</a></li>
-      <li><a class="disabled" >Milestone 3</a></li>
-      <li><a class="disabled" >Milestone 4</a></li>
-      <li><a class="disabled" >Milestone 5</a></li>
-      <li><a class="disabled" >Milestone 6</a></li>
-      <li><a class="disabled" >Milestone 7</a></li>
-      <li><a class="disabled" >Milestone 8</a></li>
+      <li><a class="nav" href="#project">Project</a></li>
+      <li><a class="nav" href="#team">Team</a></li>
+      <li><a class="nav" href="#m1">Milestone 1</a></li>
+      <li><a class="nav disabled" >Milestone 2</a></li>
+      <li><a class="nav disabled" >Milestone 3</a></li>
+      <li><a class="nav disabled" >Milestone 4</a></li>
+      <li><a class="nav disabled" >Milestone 5</a></li>
+      <li><a class="nav disabled" >Milestone 6</a></li>
+      <li><a class="nav disabled" >Milestone 7</a></li>
+      <li><a class="nav disabled" >Milestone 8</a></li>
     </ul> <!-- /nav -->
 
 		<div class="triplesq-row"><h1 class="triplesq-headline">Triple Squared</h1></div>
@@ -47,7 +47,7 @@
 
         <div class="triplesq-content">
           <p>
-            Hi, we're team Triple Squared and we are working on a project on everyday rich social communication. Project details TBA as they are refined. Check out our github repo: <a href="https://github.com/resalire/triple-squared/" target="_blank"> https://github.com/resalire/triple-squared/</a>.
+            Hi, we're team Triple Squared and we are working on a project on everyday rich social communication. Project details TBA as they are refined. Check out our <a class="btn btn-med btn-primary" id="git-btn" href="https://github.com/resalire/triple-squared/" target="_blank">Github repo</a>
           </p>
           <p>Why "Triple Squared?" We are a team of three: Emily Cheng, M.J Ma, and Sarah Sterman. Our initials are CC, MM, and SS (Emily's legal name is Cheng Cheng), thus C^2 + M^2 + S^2.</p>
         </div>
@@ -200,7 +200,7 @@
       
         
         // TOC, shows how to scroll the whole window
-        $('a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+        $('a.nav').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
           $.scrollTo( this.hash, 200, { easing:'linear' });
           $(this.hash).find('span.message').text( this.title );
           return false;
