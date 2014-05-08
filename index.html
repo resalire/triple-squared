@@ -29,7 +29,7 @@
       <li><a class="nav" href="#m1">Milestone 1</a></li>
       <li><a class="nav" href="#m2">Milestone 2</a></li>
       <li><a class="nav" href="#m3">Milestone 3</a></li>
-      <li><a class="nav disabled" >Milestone 4</a></li>
+      <li><a class="nav" href="#m4" >Milestone 4</a></li>
       <li><a class="nav disabled" >Milestone 5</a></li>
       <li><a class="nav disabled" >Milestone 6</a></li>
       <li><a class="nav disabled" >Milestone 7</a></li>
@@ -47,7 +47,7 @@
 
         <div class="triplesq-content">
           <p>
-            Hi, we're team Triple Squared and we are working on a project on everyday rich social communication. Project details TBA as they are refined. Check out our <a class="btn btn-med btn-primary" id="git-btn" href="https://github.com/resalire/triple-squared/" target="_blank">Github repo</a>
+            Hi, we're team Triple Squared and we are working on a project on everyday rich social communication. Project details TBA as they are refined. Check out our <a class="btn btn-med btn-primary" id="git-btn" href="https://github.com/ssterman/cs247-avatar-gestures" target="_blank">Github repo</a>
           </p>
           <p>Why "Triple Squared?" We are a team of three: Emily Cheng, M.J Ma, and Sarah Sterman. Our initials are CC, MM, and SS (Emily's legal name is Cheng Cheng), thus C^2 + M^2 + S^2.</p>
         </div>
@@ -208,6 +208,70 @@ body, simulating touch.
                <br/>
            <p> <span class="fui-radio-checked"> Then we did WoZ testing on 3 users each per prototype. Alternative to the PDF link, see our gdocs slide deck online <a class="btn btn-med btn-primary" id="git-btn" href="https://docs.google.com/presentation/d/1Cv4W9JELm57LY_odzhYLDAzjwY9JwEWdNcDpTOm92-E/edit?usp=sharing" target="_blank">HERE</a></p>
          
+          <br/>
+          </p>
+      </div>
+    </div>     
+
+
+     <div id="m4" class="pbl"></div>
+      <div class="triplesq-row">        
+        <div class="triplesq-title">
+          <h3>Milestone 4 </h3>
+        </div>
+
+        <div class="triplesq-content">
+          <p class="minor-heading">
+            <span class="fui-radio-checked"> Functional Prototype
+
+ <p> <span class="fui-radio-checked"> Try our prototype: <a class="btn btn-med btn-primary" id="git-btn" href="http://bearhug.herokuapp.com/" target="_blank">BEARHUG: Enhancing Physical Interactions in Video Chat</a>. </p>
+
+   <p> <span class="fui-radio-checked"> <strong>BEARHUG</strong> aims to enhance physical interactions for long distance couples in video chat by mimicking physical interaction through bear avatars that can kiss, hug, and more. All bear animations were custom created by our team. To try our app, open up the link on 2 different computers to start chatting. Our app may not work in all browsers due to our use of WebRTC to enable browser video chat. See "Implementation" below for details. You can also check out our <a class="btn btn-med btn-primary" id="git-btn" href="https://github.com/ssterman/cs247-avatar-gestures" target="_blank">Github repository</a></p>
+
+
+   <img src="images/m4-1.png" class="img-rounded img-responsive">
+   <img src="images/m4-2.png" class="img-rounded img-responsive">
+   <img src="images/m4-3.png" class="img-rounded img-responsive"  style="display:inline-block; width: 300px">
+   <img src="images/m4-6.gif" style="display:inline-block; width: 240px">
+    <img src="images/m4-4.gif"  style="display:inline-block; width: 240px"> 
+   <img src="images/m4-5.gif"  style="display:inline-block; width: 240px"> 
+
+             <p> <span class="fui-radio-checked"> <strong>Overview</strong></p>
+
+
+We created a functional prototype: BEARHUG, which aims to enhance physical interactions for long distance couples in video chat. Our user feedback from Glowy Touch indicated that touching the other person's video feed directly was not translating emotion in the way that we had hoped. We have decided to approach our goal of including physical intimacy in video chats from a different angle: by using an avatar as a proxy for the physical touch, we hope to ease the barrier of awkwardness that made our users treat Glowy Touch as a game or joke. </p><p>We had a valuable Google Hangout chat with our fantastic CS247 mentor, Paul, who suggested the idea of mediation to make things more fluent; direct interaction as we had tried to achieve through GlowyTouch is a 'hot' interaction that could cause awkwardness or anxiety, as it is revealing. He suggested instead that we could create an app where there is something mediating the interaction or a level of indirection, such as using avatars. And thus BEARHUG was born: a video chat app that allows for physical interaction through bear avatars that can kiss, hug, and more.</p>
+
+<p> <span class="fui-radio-checked"> <strong>Current Features</strong></p>
+
+<strong>1.</strong> The two video chat windows are of equal size, and placed directly next to each other, taking up nearly the entire window. By doing so, we hope to create a sense of being close to your video chat partner.
+ </p>  <p> 
+
+<strong>2.</strong> Each person has a personal avatar. Via button clicks, these avatars can execute certain gestures with each other, such as hugging, kissing, and patting. By having the avatars interact, rather than the people directly, we can have interaction by proxy. It also allows more recognizeable interactions than the glow in the previous iteration, since the avatars are vaguely humanoid and can show actions as a person would.
+ </p> 
+ <p> 
+<strong>3.</strong> The avatars loiter within the frame of their person's video screen, but can cross between video screens without respect for boundaries when executing gestures. This physically disrupts the division of two video screens and real life distance, hopefully giving a sense of connection and closeness to the participants. At the same time, the fact that the avatars must travel across the screen to reach the other and give it a hug or kiss is symbolic of the distance that is crossed to achieve this simulated physical interaciton, thus feeling authentic.
+  </p>  <p> 
+
+<p> <span class="fui-radio-checked">  <strong> Implementation </strong> </p>
+
+       We have implemented a basic live video chat system, and basic avatar gestures and controls. Avatar control signals are sent via Firebase, allowing actions on one side of the video chat to be mirrored on the other. Video chat is supported by WebRTC. WebRTC is the only viable option for video that fulfills our design needs (Google Hangouts has too many restrictions on design), however it is poorly implemented across browsers. Thus we run into some unavoidable issues of functionality between computers that we will not be able to fix. This raises questions about the future viability of the app, which we will need to discuss. We have developed basic animations for the avatars, that will be a good framework for future gesture sets and possible avatar customization. All of these animations were custom created by our team, not just simply taken from the internet. Thus we are confident in our ability to create more custom, unique animations to fulfill the needs of our app.
+   </p> <p> 
+
+<p> <span class="fui-radio-checked"> <strong>  Remaining Issues </strong> </p>
+
+             
+   <strong> 1.</strong> Adding mouse event/swipe event controls of the animation: for instance, we could use webcam video motion / edge detection to allow the user to swipe their hands to nudge the bears and interact with the bears. Or we could use the mouse to drag the bears across the screens and more directly simulate bear-to-bear interaction. This is most important because the motion involves the user more fully, especially on touch screens.
+   </p> <p> 
+<strong>2. </strong>Functionality for creation of specific video chat rooms with unique links for each couple. Currently anyone using our app would end up joining the same video chat. This should be easy to implement as it was done in the starter code of P3 Emoticons, but we wanted to focus on the avatar interaction functionality for our intiial prototype, as it is the most important feature.
+   </p> <p> 
+<strong> 3. </strong>Allow animations to interact with you outside of the predefined band, for instance, allowing it to sit on a user's shoulder in the video chat, or even pat a user's head. This would allow for interaction between avatar and person, rather than just avatar­-avatar, which adds a new, interesting dimension to explore.
+   </p> <p> 
+<strong> 4. </strong>Customization of avatars and more interaction options.
+   </p> <p> 
+<strong> 5.</strong> Explore gesture based animation control. This may not be possible, but would be the ideal interaction with the avatar. If you make a hug gesture, then the avatar also makes a hug gesture. If you move your face toward the screen for a kiss, the bears will kiss.
+</p><p>
+We are excited to further improve our prototype!
+</p>
           <br/>
           </p>
       </div>
