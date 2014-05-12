@@ -42,6 +42,10 @@
   word-wrap: break-word;
 }
 
+.smalltext p {
+  font-size: 14px !important;
+    line-height: 1;
+}
 
 .triplesq-subheadline {
    color: #1abc9c;
