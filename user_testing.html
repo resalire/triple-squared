@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Team Triple Squared</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/prettify.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+		<div class="triplesq-row"><h1 class="triplesq-subheadline"><a class="btn btn-med btn-primary" id="git-btn" href="index.html">← BACK </a> Triple Squared</div>
+    <div class="container">    	
+    	<div id="project" class="pbl"></div>
+    	
+      <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Introduction</h3>
+        </div>
+
+        <div class="triplesq-content">
+        	  <p class="minor-heading"><span class="fui-radio-checked"> Introduction: Describe your motivation and goals. Note your driving questions and hypotheses.</p>
+          <p>
+     
+BearHug is a video chatting platform for couples. The goal of BearHug is to help couples feel more connected by representing physical gestures with animated avatars. In testing BearHug with users, we need to investigate the effectiveness of the avatars, to discover whether this addition does in fact help couples feel closer.  In particular, we are looking at two questions. First, quantitatively: do couples choose to use the animation feature; in particular, do they use it after the initial novelty and discovery period? And second, qualitatively, do they feel like their chat session was improved by the animations; do they feel closer to their partner? Additionally, we will be observing if the couples communicate with any other gestures/interactions that could be potentially included in BearHug. </p> <p>
+
+Our hypothesis for the first question is yes, couples will choose to use the animation feature.  There will be an initial spike in usage, as they discover and play with the feature, which will drop down as the chat goes on, however we will still see use, particularly at the end of a chat when they say goodbye. Our hypothesis for the second question is also yes, couples will feel that the animation improved their chat experience. We also hypothesize that there will be some norm of reciprocity, so that when one 
+           </p>
+        </div>
+      </div>
+		
+		
+  <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Methods</h3>
+        </div>
+
+        <div class="triplesq-content">
+        	 <p class="minor-heading"><span class="fui-radio-checked"> Methods: Describe your study design and tasks. Whom did you recruit and how did you recruit them?</p>
+          <p>
+We are recruiting five couples to test BearHug. We will approach them Monday night over email. The couples have been selected from our extended networks, with some long-distance that heavily rely on videochatting to communicate with each other, others physically closer who yet still use videochatting as a communication tool. The couples also vary in age, relationship length, race and profession.  </p> 
+
+<p>They will each be sent a link to a unique instance of BearHug, hosted on Heroku. We will ask them to use BearHug at least twice between Monday evening and Wednesday evening, for as long as they wish. During chats, use of the animation buttons will be logged with timestamps.  After each time they use the chat, they will be asked to fill out a survey with open-ended questions such as "Please tell us about your videochat (topics covered, emotions felt, etc.)," as well as quantitative questions with rating scales.
+           </p>
+        </div>
+      </div>
+
+        <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Results</h3>
+        </div>
+
+        <div class="triplesq-content">
+        	 <p class="minor-heading"><span class="fui-radio-checked"> Results: Describe your data and present the results of data analysis (observations, statistics, charts, etc). </p>
+
+        </div>
+      </div>
+		
+		  <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Discussion</h3>
+        </div>
+
+        <div class="triplesq-content">
+        	 <p class="minor-heading"><span class="fui-radio-checked"> Discussion: Synthesize what you learned, document any shortcomings or caveats or your testing.</p>
+
+        </div>
+      </div>
+
+        <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Implications</h3>
+        </div>
+
+        <div class="triplesq-content">
+        	 <p class="minor-heading"><span class="fui-radio-checked"> Implications: Describe how you plan to apply the study results in the next iteration of your application</p>
+
+<br/><br/>
+<a class="btn btn-med btn-primary" id="git-btn" href="index.html">← BACK </a>
+<img src="images/m4-5.gif"  style="display:inline-block; width: 240px"> 
+        </div>
+      </div>
+
+
+
+
+        </div> <!-- /.triplesq-content -->
+      </div> <!-- /.triplesq-row -->
+
+
+    </div><!-- /.container -->
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="js/application.js"></script>
+    <script type="text/javascript">
+      jQuery(function( $ ){
+      
+        
+        // TOC, shows how to scroll the whole window
+        $('a.nav').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+          $.scrollTo( this.hash, 200, { easing:'linear' });
+          $(this.hash).find('span.message').text( this.title );
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

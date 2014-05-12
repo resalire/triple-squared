@@ -41,6 +41,19 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+
+.triplesq-subheadline {
+   color: #1abc9c;
+  font: 700 70px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  margin-bottom: -30px;
+  margin-top: 2px;
+  padding: 40px 0 40px 200px;
+  float: 0 auto;
+  text-align: left;
+  word-wrap: break-word;
+    font-size: 40px !important;
+  }
 .triplesq-headline {
   color: #1abc9c;
   font: 700 70px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
