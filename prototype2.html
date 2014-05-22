@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Team Triple Squared</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/prettify.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+		<div class="triplesq-row"><h1 class="triplesq-subheadline"><a class="btn btn-med btn-primary" id="git-btn" href="index.html">← BACK </a> FUNCTIONAL PROTOTYPE II Changes + Implementation</div>
+    <div class="container">    	
+    	<div id="project" class="pbl"></div>
+    	
+      <div class="triplesq-row">
+        <div class="triplesq-title">
+          <h3>Milestone 6:</h3>
+        </div>
+
+        <div class="triplesq-content">
+
+        	
+
+ <p class="minor-heading"> <span class="fui-radio-checked">  2D Movement and Animation</p>
+<p>
+<span class="fui-radio-checked">  Change: Our main change is that the bears can now move and animate in 2D space across the screen of our BearHug vidchat app. Previously the bears could only move in a 1D line and the only way to control bear movement was via 3 buttons which lead to a 3 step choreographed movement of: 1. walk 2. do gesture 3. walk-back to original spot. Now, the user can control the bear’s walking movement freely by mouse-clicking on the location they desire the bear to walk to.
+</p><p>
+<span class="fui-radio-checked">Reason: This has a couple main reasons, originating in our user testing.  First, we want the bears to be able to interact with the people as well as the other bear, and to be more free and natural in their movement.  Allowing them access to the entire screen opens up a whole new set of interactions, beyond choreographed animations: bears can sit on someone’s shoulder or pat an actual person’s head, for example.  We saw this suggested by the users who created this interaction for themselves by using the dragged images of the bears combined with Snapchat.  Second, this lets both users move bears at the same time. In this way, we prevent the feeling of being “trapped” that was expressed by testers.  Your bear can avoid the other bear’s gestures, or reciprocate gestures as they are made, rather than being frozen until a sequence is completed. 
+</p><p>
+<span class="fui-radio-checked">Implementation process: We entirely scrapped the animation code we created for our prototype I with 1D movement. Instead, we created a javascript function that moves the bear to the mouse-click position and pushes mirror-flipped coordinates to firebase so that your bear will also animate and move appropriately on the other user’s screen.
+</p><p>
+
+
+ <p class="minor-heading"> <span class="fui-radio-checked">  Gesture Button Tracking and Toggling</p>
+<span class="fui-radio-checked">  Change: The gesture buttons (hug, kiss, pat) can be toggled between showing and hidden, and it follows the bear as it moves on the 2D plane so it is easy for the user to access the buttons directly below the bear.
+</p><p>
+<span class="fui-radio-checked">Reason: Easy for the user to access the buttons directly below the bear, which comes up when keeping HCI concepts like Fitt’s law in mind, where we’re minimizing the distance the user’s mouse has to travel between bear and buttons. Previously, the buttons were just by default at the bottom of the screen. 
+</p><p>
+<span class="fui-radio-checked">Implementation process: Moved the buttons into a div inside a container that holds both the animated bear and the buttons div, so that the two can move together within the 2D space. Used jQuery to toggle buttons to show and hide onclick and onhover.
+</p><p>
+
+ <p class="minor-heading"> <span class="fui-radio-checked">  Reusable Chatrooms</p>
+
+<span class="fui-radio-checked">  Change: Made chatrooms reusable.  In the previous version, each time you signed on you needed to use a new roomname, since old actions would be played when you logged in.  Now, you can have a single roomname, and only have relevant actions play 
+</p><p>
+<span class="fui-radio-checked">Reason: Single roomnames make it much easier for pairs of people to join a chat; rather than needing to use a second communication method to share a roomname each time, the pairs can simply set up a standard roomname for themselves, and return there each time. This lowers the use barrier, and is much more intuitive.
+</p><p>
+<span class="fui-radio-checked">Implementation process:  We added timestamps to each message pushed to firebase, and only play the message if it is within three seconds of its issuance. This also prevents out of date messages playing if the connection is laggy. 
+</p><p>
+
+
+
+<br/><br/>
+<a class="btn btn-med btn-primary" id="git-btn" href="index.html">← BACK </a>
+<img src="images/m4-5.gif"  style="display:inline-block; width: 240px"> 
+        </div>
+      </div>
+
+
+
+
+        </div> <!-- /.triplesq-content -->
+      </div> <!-- /.triplesq-row -->
+
+
+    </div><!-- /.container -->
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="js/application.js"></script>
+    <script type="text/javascript">
+      jQuery(function( $ ){
+      
+        
+        // TOC, shows how to scroll the whole window
+        $('a.nav').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+          $.scrollTo( this.hash, 200, { easing:'linear' });
+          $(this.hash).find('span.message').text( this.title );
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
